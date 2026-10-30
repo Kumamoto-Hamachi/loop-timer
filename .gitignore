@@ -1,0 +1,42 @@
+# 依存パッケージ
+node_modules
+
+# ビルド成果物 (WXT)
+.output
+.wxt
+stats.html
+stats-*.json
+
+# パッケージ済みの拡張機能
+*.crx
+*.xpi
+
+# テスト・型チェック
+coverage
+*.tsbuildinfo
+
+# 秘密情報 (wxt submit の .env.submit や拡張機能の署名鍵など)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ログ
+logs
+*.log
+
+# 個人ごとの設定
+web-ext.config.ts
+.claude/settings.local.json
+CLAUDE.local.md
+
+# エディタ
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db

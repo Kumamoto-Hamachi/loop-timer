@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15分ループタイマー</title>
+    <meta name="manifest.type" content="browser_action" />
+  </head>
+  <body>
+    <main class="popup" data-phase="idle">
+      <section class="status">
+        <p class="phase-label" id="phase-label"></p>
+        <p class="countdown" id="countdown"></p>
+        <p class="hint" id="hint"></p>
+      </section>
+
+      <section class="actions">
+        <button type="button" class="primary" id="start">開始</button>
+        <button type="button" class="primary" id="dismiss" hidden>止める</button>
+        <button type="button" class="secondary" id="stop" hidden>ループを終了</button>
+      </section>
+
+      <section class="settings">
+        <label>
+          <span>作業時間</span>
+          <input type="number" id="work-minutes" min="1" max="180" step="1" required />
+          <span>分</span>
+        </label>
+        <label>
+          <span>休憩時間</span>
+          <input type="number" id="rest-seconds" min="1" max="3600" step="1" required />
+          <span>秒</span>
+        </label>
+        <p class="note">変更は次のタイマーから反映されます</p>
+      </section>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
